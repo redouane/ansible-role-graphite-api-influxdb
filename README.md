@@ -1,6 +1,8 @@
 Role Name Graphite-api-influxdb
 ===============================
 
+[![Build Status](https://travis-ci.org/redouane/ansible-role-graphite-api-influxdb.svg?branch=master)](https://travis-ci.org/redouane/ansible-role-graphite-api-influxdb)
+
 Installs and configures graphite-api and graphite-influxdb as a finder
 
 Requirements
