@@ -1,0 +1,4 @@
+---
+# handlers file for graphite-api-influxdb
+- name: restart graphite-api
+  service: name=graphite-api state=restarted

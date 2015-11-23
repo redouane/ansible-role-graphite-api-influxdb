@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  author: Redouane Zait
+  description: Installs and configures graphite-api and graphite-influxdb as a finder
+  company: your company (optional)
+  license: BSD
+  min_ansible_version: 1.2
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+  categories:
+  - monitoring
+  - web
+dependencies: []

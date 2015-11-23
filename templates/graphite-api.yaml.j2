@@ -1,0 +1,20 @@
+search_index: /srv/graphite/index
+finders:
+  - graphite_influxdb.InfluxdbFinder
+influxdb:
+   db: {{ graphite_api_influxdb_db }}
+   host: {{ graphite_api_influxdb_host }}
+   port: {{ graphite_api_influxdb_port }}
+   user: {{ graphite_api_influxdb_user }}
+   pass: {{ graphite_api_influxdb_pass }}
+   aggregation_functions:
+{% for mapping in graphite_api_influxdb_aggregation_functions %}
+{% for k, v in mapping.items() %}
+     {{ k }} : {{ v }}
+{% endfor %}
+{% endfor %}
+
+functions:
+  - graphite_api.functions.SeriesFunctions
+  - graphite_api.functions.PieFunctions
+time_zone: {{ graphite_api_influxdb_timezone }}

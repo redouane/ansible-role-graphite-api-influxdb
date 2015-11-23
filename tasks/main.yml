@@ -1,0 +1,5 @@
+---
+# tasks file for graphite-api-influxdb
+
+- include: graphite_api.yml
+- include: graphite_influxdb.yml

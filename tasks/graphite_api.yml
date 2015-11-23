@@ -1,0 +1,18 @@
+---
+
+- name: download graphite_api deb package release
+  get_url:
+    url={{ graphite_api_deb_url }}
+    dest=/tmp/graphite_api.deb
+    mode=0440
+
+- name: install graphite-api deb package
+  apt:
+    deb=/tmp/graphite_api.deb
+
+- name: configure graphite-api
+  template:
+    src=graphite-api.yaml.j2
+    dest=/etc/graphite-api.yaml
+  notify:
+  - restart graphite-api
